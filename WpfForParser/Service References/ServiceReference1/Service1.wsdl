@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:64225/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:64225/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:64225/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetNowWeather_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNowWeather" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetNowWeather_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNowWeatherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTodayWeather_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTodayWeather" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTodayWeather_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTodayWeatherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOtherInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherInformation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOtherInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtherInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRegionArr_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionArr" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRegionArr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionArrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetRegionToMySQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegionToMySQL" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SetRegionToMySQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetRegionToMySQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetError_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetError" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Refresh_InputMessage">
+    <wsdl:part name="parameters" element="tns:Refresh" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Refresh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetNowWeather">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNowWeather" message="tns:IService1_GetNowWeather_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNowWeatherResponse" message="tns:IService1_GetNowWeather_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTodayWeather">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTodayWeather" message="tns:IService1_GetTodayWeather_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTodayWeatherResponse" message="tns:IService1_GetTodayWeather_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOtherInformation" message="tns:IService1_GetOtherInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOtherInformationResponse" message="tns:IService1_GetOtherInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionArr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRegionArr" message="tns:IService1_GetRegionArr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRegionArrResponse" message="tns:IService1_GetRegionArr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetRegionToMySQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SetRegionToMySQL" message="tns:IService1_SetRegionToMySQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SetRegionToMySQLResponse" message="tns:IService1_SetRegionToMySQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetError">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetError" message="tns:IService1_GetError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetErrorResponse" message="tns:IService1_GetError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Refresh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Refresh" message="tns:IService1_Refresh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/RefreshResponse" message="tns:IService1_Refresh_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNowWeather">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetNowWeather" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTodayWeather">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTodayWeather" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtherInformation">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOtherInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionArr">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRegionArr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetRegionToMySQL">
+      <soap:operation soapAction="http://tempuri.org/IService1/SetRegionToMySQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetError">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Refresh">
+      <soap:operation soapAction="http://tempuri.org/IService1/Refresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:64225/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

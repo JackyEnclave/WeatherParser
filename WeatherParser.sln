@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherParser", "WeatherParser\WeatherParser.csproj", "{83BD5E1A-1BC4-4579-A3D5-83352885E3A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceForParser", "WcfServiceForParser\WcfServiceForParser.csproj", "{BA73B465-C01E-46AF-82F2-C3334F85B371}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfForParser", "WpfForParser\WpfForParser.csproj", "{2DD21782-A342-485A-A2E6-B1385001D14B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BA73B465-C01E-46AF-82F2-C3334F85B371} = {BA73B465-C01E-46AF-82F2-C3334F85B371}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83BD5E1A-1BC4-4579-A3D5-83352885E3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BD5E1A-1BC4-4579-A3D5-83352885E3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BD5E1A-1BC4-4579-A3D5-83352885E3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BD5E1A-1BC4-4579-A3D5-83352885E3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA73B465-C01E-46AF-82F2-C3334F85B371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA73B465-C01E-46AF-82F2-C3334F85B371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA73B465-C01E-46AF-82F2-C3334F85B371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA73B465-C01E-46AF-82F2-C3334F85B371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DD21782-A342-485A-A2E6-B1385001D14B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DD21782-A342-485A-A2E6-B1385001D14B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DD21782-A342-485A-A2E6-B1385001D14B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DD21782-A342-485A-A2E6-B1385001D14B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
